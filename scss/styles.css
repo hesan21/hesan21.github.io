@@ -1,0 +1,47 @@
+* {
+  font-family: 'Teko', 'Poppins' ,sans-serif;
+}
+
+header .navbar {
+  font-family: 'Teko';
+  background: transparent;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .navbar .navbar-brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+header .navbar .navbar-brand h1 {
+  line-height: 0.2;
+}
+
+header .navbar .navbar-collapse .navbar-nav .nav-link {
+  font-size: 17px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 15px 7px;
+  margin: 10px 15px;
+}
