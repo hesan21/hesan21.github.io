@@ -2,7 +2,18 @@
   font-family: 'Teko', 'Poppins' ,sans-serif;
 }
 
+body {
+  background: #11141b !important;
+}
+
+header {
+  position: relative;
+}
+
 header .navbar {
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
   font-family: 'Teko';
   background: transparent;
   display: -webkit-box !important;
@@ -13,28 +24,31 @@ header .navbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;
 }
 
 header .navbar .navbar-brand {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  padding: 0;
+  margin: 0;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  line-height: 0.2;
 }
 
 header .navbar .navbar-brand h1 {
-  line-height: 0.2;
+  font-size: 25px;
 }
 
 header .navbar .navbar-collapse .navbar-nav .nav-link {
@@ -44,4 +58,148 @@ header .navbar .navbar-collapse .navbar-nav .nav-link {
   letter-spacing: 2px;
   padding: 15px 7px;
   margin: 10px 15px;
+}
+
+header #banner-container {
+  position: relative;
+  height: 100vh;
+  background-attachment: fixed;
+  background-image: url("../assets/banners/banner2.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header #banner-container #banner-overlay {
+  position: absolute;
+  top: 0;
+  min-height: 100%;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+header #banner-container #banner-overlay #banner-overlay-text-container {
+  position: absolute;
+  color: #fff;
+  top: 40vh;
+  left: 15vw;
+  text-align: center;
+}
+
+header #banner-container #banner-overlay #banner-overlay-text-container #banner-overlay-heading {
+  color: #fff;
+  letter-spacing: 4px;
+  font-weight: 500;
+  font-size: 65px;
+  text-transform: uppercase;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+header #banner-container #banner-overlay #banner-overlay-text-container #banner-overlay-subheading {
+  color: #fff;
+  letter-spacing: 4px;
+  font-weight: 300;
+  font-size: 25px;
+  text-transform: uppercase;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+header #banner-container #banner-overlay #banner-scroll-button {
+  color: #fff;
+  position: absolute;
+  bottom: 7vh;
+  left: 50vw;
+  width: 24px;
+  height: 24px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: scroll-button 1.5s infinite;
+          animation: scroll-button 1.5s infinite;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#about-me-container {
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #fff;
+}
+
+#about-me-container #about-me-heading {
+  text-transform: uppercase;
+  width: 50%;
+}
+
+#about-me-container #about-me-heading h1 {
+  font-size: 60px;
+}
+
+#about-me-container #about-me-heading .subheading {
+  color: #ff6d54;
+  letter-spacing: 14px;
+  font-size: 17px;
+  font-weight: 300;
+  padding-left: 2px;
+}
+
+#about-me-container #about-me-text {
+  width: 50%;
+  color: #c8c8c8;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  line-height: 2;
+}
+
+#about-me-container #about-me-text p {
+  font-family: 'Poppins';
+}
+
+@-webkit-keyframes scroll-button {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+            transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+            transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+@keyframes scroll-button {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+            transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+            transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
 }

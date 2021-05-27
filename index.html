@@ -23,6 +23,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&amp;display=swap" 
                 rel="stylesheet">
 
+        <!-- Animate CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+            rel="stylesheet"
+        />
+
+        <!-- Animate On Scroll -->
+
         <!-- Website title -->
         <title>Hesan Naveed | Portfolio</title>
     </head>
@@ -30,50 +37,93 @@
     <body>
         <header>
             <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container">
-                  <a class="navbar-brand" href="#">
-                      <h1>Hesan Naveed</h1>
-                      <span>Software Engineer</span>
-                  </a>
+                    <a class="navbar-brand" href="#">
+                        <h1><span><</span> Porfolio</h1>
+                        <h1>/</h1>
+                        <h1>></h1>
+                    </a>
                   
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">About Me</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Portfolio</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Hire Me</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                      </li>
-                    </ul>
-                  </div>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about-me-container">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Hire Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        </ul>
+                    </div>
                 </div>
-              </nav>
+            </nav>
+
+            <!-- Banner -->
+            <div id="banner-container">
+                <div id="banner-overlay">
+                    <div id="banner-overlay-text-container">
+                        <h1 id="banner-overlay-heading" 
+                            class="animate__animated animate__backInDown">
+                            Hesan Naveed
+                        </h1>
+                        <p id="banner-overlay-subheading" 
+                            class="animate__animated animate__backInUp">
+                            Software Engineer
+                        </p>
+                    </div>
+
+                    <a id="banner-scroll-button" href="#">
+                        <span></span>
+                    </a>
+                </div>
+            </div>
         </header>
 
-        <section>
+        <!-- About Me Section -->
+        <section id="about-me-container" class="container">
+            <div id="about-me-heading">
+                <p class="subheading">About Me</p>
+                <h1>Professional FullStack Developer</h1>
+            </div>
 
+            <div id="about-me-text">
+                <p>
+                    Hey Everyone!
+                </p>
+                <p>
+                    My name is Hesan and I am a professional FullStack Developer. I have over 4 years of experience in
+                    developing small to large scale applications.
+                </p>
+                <p>
+                    Developing an application is a great skill to posses but, as applications grows,
+                    the codebase needs to be maintained and that is where experience comes to play its role. 
+                    I have always written code that is well-structured and organized.
+                </p>
+            </div>
         </section>
         
         <footer>
 
         </footer>
+
+        <!-- JQuery Script -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
         <!-- Bootstrap Scripts -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" 
