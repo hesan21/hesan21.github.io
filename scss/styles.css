@@ -4,6 +4,7 @@
 
 body {
   background: #11141b !important;
+  overflow-x: hidden;
 }
 
 header {
@@ -125,8 +126,12 @@ header #banner-container #banner-overlay #banner-scroll-button {
           box-sizing: border-box;
 }
 
-#about-me-container {
-  height: 70vh;
+#about-me {
+  position: relative;
+}
+
+#about-me #about-me-text-container {
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,16 +147,16 @@ header #banner-container #banner-overlay #banner-scroll-button {
   color: #fff;
 }
 
-#about-me-container #about-me-heading {
+#about-me #about-me-text-container #about-me-heading {
   text-transform: uppercase;
   width: 50%;
 }
 
-#about-me-container #about-me-heading h1 {
+#about-me #about-me-text-container #about-me-heading h1 {
   font-size: 60px;
 }
 
-#about-me-container #about-me-heading .subheading {
+#about-me #about-me-text-container #about-me-heading .subheading {
   color: #ff6d54;
   letter-spacing: 14px;
   font-size: 17px;
@@ -159,7 +164,7 @@ header #banner-container #banner-overlay #banner-scroll-button {
   padding-left: 2px;
 }
 
-#about-me-container #about-me-text {
+#about-me #about-me-text-container #about-me-text {
   width: 50%;
   color: #c8c8c8;
   font-size: 15px;
@@ -168,8 +173,304 @@ header #banner-container #banner-overlay #banner-scroll-button {
   line-height: 2;
 }
 
-#about-me-container #about-me-text p {
+#about-me #about-me-text-container #about-me-text p {
   font-family: 'Poppins';
+}
+
+#about-me #about-scroll-button {
+  color: #fff;
+  position: absolute;
+  bottom: 7vh;
+  left: 50vw;
+  width: 24px;
+  height: 24px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: scroll-button 1.5s infinite;
+          animation: scroll-button 1.5s infinite;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#services {
+  width: 100vw;
+  min-height: 100vh;
+  background: #13161d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#services #services-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#services #services-text h1 {
+  font-size: 70px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+#services #services-text .subheading {
+  color: #ff6d54;
+  letter-spacing: 14px;
+  font-size: 17px;
+  font-weight: 300;
+  padding-left: 2px;
+}
+
+#services .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 50vh;
+  width: 24%;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  background-color: #171b23;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+#services .card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+#services .card::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background-image: linear-gradient(135deg, #e9e9e9 8.33%, transparent 8.33%, transparent 50%, #e9e9e9 50%, #e9e9e9 58.33%, transparent 58.33%, transparent 100%);
+  background-size: 8.49px 8.49px;
+  opacity: 0.1 !important;
+  z-index: -2;
+}
+
+#services .card::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: #171b23;
+  z-index: -1;
+}
+
+#services .card .my-card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  height: 20%;
+}
+
+#services .card .my-card-header h1 {
+  font-size: 80px;
+  color: #2daaff;
+}
+
+#services .card .my-card-header h2 {
+  font-size: 30px;
+}
+
+#services .card .my-card-body {
+  text-align: center;
+  font-family: 'poppins';
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 75%;
+  margin: 0 auto;
+  height: 47%;
+  color: #c8c8c8;
+}
+
+#services .card .skills-container {
+  max-width: 100%;
+  overflow: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 13%;
+  color: #c8c8c8;
+}
+
+#services .card .skills {
+  margin: 0 2px;
+  font-family: 'Poppins';
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+#services .card .my-card-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#services .card .my-card-footer .footer-icon i {
+  color: #c8c8c8;
+}
+
+#services .card .my-card-footer h6 a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 300;
+  cursor: pointer;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  margin: auto 0;
+}
+
+#services .card .my-card-footer h6 a:hover {
+  color: #ff6d54 !important;
+}
+
+#portfolio {
+  width: 100vw;
+  min-height: 100vh;
+  background: #13161d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+#portfolio::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/portfolio-bg-pattern.svg);
+  opacity: .04;
+  z-index: 0;
+}
+
+#portfolio #portfolio-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#portfolio #portfolio-text h1 {
+  font-size: 70px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+#portfolio #portfolio-text .subheading {
+  color: #ff6d54;
+  letter-spacing: 14px;
+  font-size: 17px;
+  font-weight: 300;
+  padding-left: 2px;
 }
 
 @-webkit-keyframes scroll-button {
@@ -202,4 +503,147 @@ header #banner-container #banner-overlay #banner-scroll-button {
             transform: rotate(-45deg) translate(-20px, 20px);
     opacity: 0;
   }
+}
+
+.popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: .64s ease-in-out;
+  transition: .64s ease-in-out;
+}
+
+.popup-inner {
+  position: relative;
+  bottom: -100vw;
+  right: -100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 800px;
+  max-height: 600px;
+  width: 60%;
+  height: 80%;
+  background-color: #11141b;
+  -webkit-transform: rotate(32deg);
+          transform: rotate(32deg);
+  -webkit-transition: .64s ease-in-out;
+  transition: .64s ease-in-out;
+  overflow: hidden;
+}
+
+.popup__photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+  height: 250%;
+  overflow: hidden;
+  background-color: rgba(0, 24, 51, 0.7);
+}
+
+.popup__photo img {
+  width: auto;
+  height: 100%;
+}
+
+.popup__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60%;
+  height: 100%;
+  padding: 4rem;
+  background-color: rgba(0, 24, 51, 0.7);
+}
+
+.popup__text .heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  height: 10%;
+}
+
+.popup__text .tags {
+  height: 15vh;
+}
+
+.popup__text .tags .skills {
+  margin: 0 2px;
+  font-family: 'Poppins';
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.popup__text .text {
+  font-family: 'Poppins';
+  font-size: .875rem;
+  color: #c8c8c8;
+  line-height: 1.5;
+  height: 70%;
+  overflow: auto;
+}
+
+.popup:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup:target .popup-inner {
+  bottom: 0;
+  right: 0;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.popup__close {
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  width: 3rem;
+  height: 3rem;
+  font-size: .875rem;
+  font-weight: 300;
+  border-radius: 100%;
+  background-color: #0A0A0A;
+  z-index: 4;
+  color: #fff;
+  line-height: 3rem;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
 }

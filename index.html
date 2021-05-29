@@ -23,6 +23,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&amp;display=swap" 
                 rel="stylesheet">
 
+        <!-- Font Awesome Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <!-- Animate CSS -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
             rel="stylesheet"
@@ -37,7 +42,7 @@
     <body>
         <header>
             <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark" >
                 <div class="container">
                     <a class="navbar-brand" href="#">
                         <h1><span><</span> Porfolio</h1>
@@ -45,30 +50,32 @@
                         <h1>></h1>
                     </a>
                   
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
+                            aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about-me-container">About Me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Hire Me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
+                        <ul class="navbar-nav" id="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="first-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about-me">About Me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#services">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#portfolio">Portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Hire Me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -79,16 +86,16 @@
                 <div id="banner-overlay">
                     <div id="banner-overlay-text-container">
                         <h1 id="banner-overlay-heading" 
-                            class="animate__animated animate__backInDown">
+                            class="">
                             Hesan Naveed
                         </h1>
                         <p id="banner-overlay-subheading" 
-                            class="animate__animated animate__backInUp">
+                            class="">
                             Software Engineer
                         </p>
                     </div>
 
-                    <a id="banner-scroll-button" href="#">
+                    <a id="banner-scroll-button" href="#about-me">
                         <span></span>
                     </a>
                 </div>
@@ -96,28 +103,209 @@
         </header>
 
         <!-- About Me Section -->
-        <section id="about-me-container" class="container">
-            <div id="about-me-heading">
-                <p class="subheading">About Me</p>
-                <h1>Professional FullStack Developer</h1>
+        <section id="about-me">
+            <div id="about-me-text-container" class="container">
+                <div id="about-me-heading">
+                    <p class="subheading">About Me</p>
+                    <h1>Professional FullStack Developer</h1>
+                </div>
+    
+                <div id="about-me-text">
+                    <p>
+                        Hey Everyone!
+                    </p>
+                    <p>
+                        My name is Hesan and I am a professional FullStack Developer. I have over 4 years of experience in
+                        developing small to large scale applications.
+                    </p>
+                    <p>
+                        Developing an application is a great skill to posses but, as applications grows,
+                        the codebase needs to be maintained and that is where experience comes to play its role. 
+                        I have always written code that is well-structured and organized.
+                    </p>
+                </div>
             </div>
 
-            <div id="about-me-text">
-                <p>
-                    Hey Everyone!
-                </p>
-                <p>
-                    My name is Hesan and I am a professional FullStack Developer. I have over 4 years of experience in
-                    developing small to large scale applications.
-                </p>
-                <p>
-                    Developing an application is a great skill to posses but, as applications grows,
-                    the codebase needs to be maintained and that is where experience comes to play its role. 
-                    I have always written code that is well-structured and organized.
-                </p>
-            </div>
+            <a id="about-scroll-button" href="#services">
+                <span></span>
+            </a>
         </section>
         
+        <!-- Services Section -->
+        <section id="services">
+            <div id="services-text">
+                <p class="subheading">Best Features</p>
+                <h1>Services.</h1>
+            </div>
+
+            <div class="d-flex justify-content-between container">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="my-card-header">
+                            <h1>P</h1>
+                            <h2>sd to HTML</h2>
+                        </div>
+                        <div class="my-card-body">
+                            Convert a Photoshop Design into a responsive, pixel-perfect HTML.
+                        </div>
+                        <div class="skills-container">
+                            <div class="skills badge bg-primary">HTML</div>
+                            <div class="skills badge bg-primary">CSS</div>
+                            <div class="skills badge bg-secondary">Bootstrap</div>
+                        </div>
+                        <div class="my-card-footer">
+                            <span class="footer-icon">
+                                <img src="./assets/psd.png" width="50" alt="">
+                            </span>
+                            <h6> 
+                                <a href="#psd__popup">Read more ></a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="my-card-header">
+                            <h1 style="color: rgba(255,97,246,255);">X</h1>
+                            <h2>D to HTML CSS</h2>
+                        </div>
+                        <div class="my-card-body">
+                            Convert an Adobe XD File into interactive Webpage.
+                        </div>
+                        <div class="skills-container">
+                            <div class="skills badge bg-primary">HTML</div>
+                            <div class="skills badge bg-primary">CSS</div>
+                            <div class="skills badge bg-primary">JavaScript</div>
+                            <div class="skills badge bg-secondary">Bootstrap</div>
+                        </div>
+                        <div class="my-card-footer">
+                            <span class="footer-icon">
+                                <img src="./assets/xd.png" width="50" alt="">
+                            </span>
+                            <h6> 
+                                <a href="#psd__popup">Read more ></a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="my-card-header">
+                            <h1 style="color: rgba(3,214,255,255);">R</h1>
+                            <h2>eact Application</h2>
+                        </div>
+                        <div class="my-card-body">
+                            ReactJS application using Hooks and Redux for State Management.
+                        </div>
+                        <div class="skills-container">
+                            <div class="skills badge bg-primary">ReactJS</div>
+                            <div class="skills badge bg-primary">Redux</div>
+                            <div class="skills badge bg-primary">Hooks</div>
+                            <div class="skills badge bg-secondary">SCSS</div>
+                            <div class="skills badge bg-secondary">Bootstrap/Reactstrap</div>
+                            <div class="skills badge bg-danger">APIs</div>
+                            <div class="skills badge bg-success">...</div>
+                        </div>
+                        <div class="my-card-footer">
+                            <span class="footer-icon">
+                                <img src="./assets/react.png" width="50" alt="">
+                            </span>
+                            <h6> 
+                                <a href="#psd__popup">Read more ></a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="my-card-header">
+                            <h1 style="color: rgba(255,45,32,255);">L</h1>
+                            <h2>aravel Application</h2>
+                        </div>
+                        <div class="my-card-body">
+                            Convert a Photoshop Design into a responsive, pixel-perfect HTML.
+                        </div>
+                        <div class="skills-container">
+                            <div class="skills badge bg-primary">Laravel</div>
+                            <div class="skills badge bg-primary">MySQL</div>
+                            <div class="skills badge bg-primary">Apache</div>
+                            <div class="skills badge bg-secondary">Scheduling</div>
+                            <div class="skills badge bg-secondary">APIs</div>
+                            <div class="skills badge bg-danger">Middlewares</div>
+                            <div class="skills badge bg-success">...</div>
+                        </div>
+                        <div class="my-card-footer">
+                            <span class="footer-icon">
+                                <img src="./assets/laravel.png" width="50" alt="">
+                            </span>
+                            <h6> 
+                                <a href="#psd__popup">Read more ></a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <div id="portfolio-text">
+                <p class="subheading">Best Works</p>
+                <h1>Portfolio.</h1>
+            </div>
+        </section>
+
+        <!-- Pop Ups/Modals -->
+        <div class="popup" id="psd__popup">
+            <div class="popup-inner">
+            <div class="popup__photo">
+                <img src="./assets/psd-sample.png" alt="">
+            </div>
+            <div class="popup__text">
+                <h1 class="heading" style="color: rgba(45,170,255,255);">PSD to HTML</h1>
+
+                <div class="tags">
+                    <div class="skills badge bg-primary">HTML</div>
+                    <div class="skills badge bg-primary">CSS</div>
+                    <div class="skills badge bg-secondary">Bootstrap</div>
+                    
+                    <br/>
+
+                    <div class="skills badge bg-danger">Responsive</div>
+                    <div class="skills badge bg-danger">Pixel-Perfect</div>
+                    <div class="skills badge bg-danger">Cross-Browser Compatibility</div>
+                </div>
+
+                <p class="text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Integer ex velit, viverra non vulputate vitae, blandit vitae nisl. Nullam fermentum orci et 
+                    erat viverra bibendum. Aliquam sed varius nibh, vitae mattis purus. Mauris elementum sapien 
+                    non ullamcorper vulputate. Orci varius natoque penatibus et magnis dis parturient montes, 
+                    nascetur ridiculus mus. Sed eget felis sit amet eros viverra pulvinar.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Integer ex velit, viverra non vulputate vitae, blandit vitae nisl. Nullam fermentum orci et 
+                    erat viverra bibendum. Aliquam sed varius nibh, vitae mattis purus. Mauris elementum sapien 
+                    non ullamcorper vulputate. Orci varius natoque penatibus et magnis dis parturient montes, 
+                    nascetur ridiculus mus. Sed eget felis sit amet eros viverra pulvinar.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Integer ex velit, viverra non vulputate vitae, blandit vitae nisl. Nullam fermentum orci et 
+                    erat viverra bibendum. Aliquam sed varius nibh, vitae mattis purus. Mauris elementum sapien 
+                    non ullamcorper vulputate. Orci varius natoque penatibus et magnis dis parturient montes, 
+                    nascetur ridiculus mus. Sed eget felis sit amet eros viverra pulvinar.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Integer ex velit, viverra non vulputate vitae, blandit vitae nisl. Nullam fermentum orci et 
+                    erat viverra bibendum. Aliquam sed varius nibh, vitae mattis purus. Mauris elementum sapien 
+                    non ullamcorper vulputate. Orci varius natoque penatibus et magnis dis parturient montes, 
+                    nascetur ridiculus mus. Sed eget felis sit amet eros viverra pulvinar.
+                </p>
+            </div>
+            <a class="popup__close" href="#services">&#10005;</a>
+            </div>
+        </div>
+
         <footer>
 
         </footer>
