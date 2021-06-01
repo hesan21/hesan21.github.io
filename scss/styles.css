@@ -13,7 +13,7 @@ header {
 
 header .navbar {
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   width: 100vw;
   font-family: 'Teko';
   background: transparent;
@@ -471,6 +471,245 @@ header #banner-container #banner-overlay #banner-scroll-button {
   font-size: 17px;
   font-weight: 300;
   padding-left: 2px;
+}
+
+#portfolio #portfolio-slider-wrapper {
+  width: 100vw;
+  height: 60vh;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+}
+
+#portfolio #portfolio-slider-wrapper input[type=radio] {
+  display: none;
+}
+
+#portfolio #portfolio-slider-wrapper .cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+#portfolio #portfolio-slider-wrapper .cards .image-card {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transition: -webkit-transform .4s ease;
+  transition: -webkit-transform .4s ease;
+  transition: transform .4s ease;
+  transition: transform .4s ease, -webkit-transform .4s ease;
+  cursor: pointer;
+}
+
+#portfolio #portfolio-slider-wrapper .cards .image-card #work-1-details-button, #portfolio #portfolio-slider-wrapper .cards .image-card #work-2-details-button,
+#portfolio #portfolio-slider-wrapper .cards .image-card #work-3-details-button, #portfolio #portfolio-slider-wrapper .cards .image-card #work-4-details-button {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+  -webkit-transition: opacity 0.25s linear;
+  transition: opacity 0.25s linear;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#portfolio #portfolio-slider-wrapper .cards .image-card #work-1-details-button a, #portfolio #portfolio-slider-wrapper .cards .image-card #work-2-details-button a,
+#portfolio #portfolio-slider-wrapper .cards .image-card #work-3-details-button a, #portfolio #portfolio-slider-wrapper .cards .image-card #work-4-details-button a {
+  color: #c8c8c8;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 300;
+  border: 1px solid #13161d;
+  font-family: 'Poppins';
+  padding: 10px;
+  background-color: rgba(19, 22, 29, 0.5);
+  -webkit-transition: -webkit-transform 0.25s linear;
+  transition: -webkit-transform 0.25s linear;
+  transition: transform 0.25s linear;
+  transition: transform 0.25s linear, -webkit-transform 0.25s linear;
+}
+
+#portfolio #portfolio-slider-wrapper .cards .image-card #work-1-details-button a:hover, #portfolio #portfolio-slider-wrapper .cards .image-card #work-2-details-button a:hover,
+#portfolio #portfolio-slider-wrapper .cards .image-card #work-3-details-button a:hover, #portfolio #portfolio-slider-wrapper .cards .image-card #work-4-details-button a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-color: rgba(19, 22, 29, 0.8);
+}
+
+#portfolio #portfolio-slider-wrapper .cards .image-card:hover #work-1-details-button {
+  visibility: visible;
+  opacity: 1;
+}
+
+#portfolio #portfolio-slider-wrapper .cards .image-card:hover #work-2-details-button {
+  visibility: visible;
+  opacity: 1;
+}
+
+#portfolio #portfolio-slider-wrapper .cards .image-card:hover #work-3-details-button {
+  visibility: visible;
+  opacity: 1;
+}
+
+#portfolio #portfolio-slider-wrapper .cards .image-card:hover #work-4-details-button {
+  visibility: visible;
+  opacity: 1;
+}
+
+#portfolio #portfolio-slider-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#portfolio #portfolio-slider-wrapper #work-1:checked ~ .cards #overlay-4,
+#portfolio #portfolio-slider-wrapper #work-2:checked ~ .cards #overlay-1,
+#portfolio #portfolio-slider-wrapper #work-3:checked ~ .cards #overlay-2,
+#portfolio #portfolio-slider-wrapper #work-4:checked ~ .cards #overlay-3 {
+  -webkit-transform: translatex(-40%) scale(0.8);
+          transform: translatex(-40%) scale(0.8);
+  opacity: .4;
+  z-index: 1;
+}
+
+#portfolio #portfolio-slider-wrapper #work-1:checked ~ .cards #overlay-2,
+#portfolio #portfolio-slider-wrapper #work-2:checked ~ .cards #overlay-3,
+#portfolio #portfolio-slider-wrapper #work-3:checked ~ .cards #overlay-4,
+#portfolio #portfolio-slider-wrapper #work-4:checked ~ .cards #overlay-1 {
+  -webkit-transform: translatex(40%) scale(0.8);
+          transform: translatex(40%) scale(0.8);
+  opacity: .4;
+  z-index: 1;
+}
+
+#portfolio #portfolio-slider-wrapper #work-1:checked ~ .cards #overlay-1,
+#portfolio #portfolio-slider-wrapper #work-2:checked ~ .cards #overlay-2,
+#portfolio #portfolio-slider-wrapper #work-3:checked ~ .cards #overlay-3,
+#portfolio #portfolio-slider-wrapper #work-4:checked ~ .cards #overlay-4 {
+  -webkit-transform: translatex(0) scale(1);
+          transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 2;
+}
+
+#portfolio #portfolio-slider-wrapper #work-1:checked ~ .cards #overlay-1 img,
+#portfolio #portfolio-slider-wrapper #work-2:checked ~ .cards #overlay-2 img,
+#portfolio #portfolio-slider-wrapper #work-3:checked ~ .cards #overlay-3 img,
+#portfolio #portfolio-slider-wrapper #work-4:checked ~ .cards #overlay-4 img {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+          box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+}
+
+#portfolio #portfolio-slider-wrapper #work-1:checked ~ .cards #overlay-4,
+#portfolio #portfolio-slider-wrapper #work-2:checked ~ .cards #overlay-4 {
+  opacity: 0.4;
+}
+
+#testimonials {
+  height: 80vh;
+}
+
+#testimonials #testimonials-cards {
+  background-color: #171b23;
+  height: 60vh;
+  margin: 10vh 0;
+  z-index: 1;
+  position: relative;
+}
+
+#testimonials #testimonials-cards::before {
+  content: '';
+  position: absolute;
+  top: 3vh;
+  right: -3vw;
+  width: 8vw;
+  height: 8vw;
+  background: #ff6d54;
+}
+
+#testimonials #testimonials-cards::after {
+  content: '';
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 6vh;
+  right: -1vw;
+  width: 4vw;
+  height: 4vw;
+  background-image: url(../assets/left-quote.svg);
+}
+
+#testimonials #testimonials-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: #fff;
+  text-align: left;
+  text-transform: uppercase;
+  padding-left: 7vw;
+}
+
+#testimonials #testimonials-text h1 {
+  font-size: 70px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+#testimonials #testimonials-text .subheading {
+  color: #ff6d54;
+  letter-spacing: 14px;
+  font-size: 17px;
+  font-weight: 300;
 }
 
 @-webkit-keyframes scroll-button {

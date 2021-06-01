@@ -9,8 +9,6 @@ $(document).ready(function () {
         else{
             $(".navbar").css("background" , "transparent")
         }
-
-        
     })()
 
     $(window).scroll(function(){
@@ -23,7 +21,7 @@ $(document).ready(function () {
         }
 
         if(scroll == 0 || scroll < 500){
-            $('.nav-item a').removeClass('active');
+            // $('.nav-item a').removeClass('active');
             $('#first-link').addClass('active');
         }else{
             $('#first-link').removeClass('active');
