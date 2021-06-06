@@ -32,4 +32,15 @@ $(document).ready(function () {
         $('.nav-item a').removeClass('active');
         $(this).addClass('active');
     });
+
+    // Marquee Slideshow Configuration
+    $(function () {
+        $('.marquee').marquee({
+            duration: 15000,
+            gap: 00, 
+            direction: 'left',
+            duplicated: true,
+            pauseOnHover: true
+        });
+    });
 });

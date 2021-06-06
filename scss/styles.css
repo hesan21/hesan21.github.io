@@ -517,6 +517,7 @@ header #banner-container #banner-overlay #banner-scroll-button {
   transition: transform .4s ease;
   transition: transform .4s ease, -webkit-transform .4s ease;
   cursor: pointer;
+  background-color: #13161d;
 }
 
 #portfolio #portfolio-slider-wrapper .cards .image-card #work-1-details-button, #portfolio #portfolio-slider-wrapper .cards .image-card #work-2-details-button,
@@ -638,6 +639,67 @@ header #banner-container #banner-overlay #banner-scroll-button {
   opacity: 0.4;
 }
 
+#marquee {
+  width: 100vw;
+  overflow: hidden;
+  height: 20vh;
+  padding-top: 5vh;
+  background-color: #171b23;
+}
+
+#marquee .icons {
+  margin: 0 5vw;
+  color: #c8c8c8;
+  cursor: pointer;
+  -webkit-transition: color 0.5s linear, -webkit-transform 0.1s linear;
+  transition: color 0.5s linear, -webkit-transform 0.1s linear;
+  transition: transform 0.1s linear, color 0.5s linear;
+  transition: transform 0.1s linear, color 0.5s linear, -webkit-transform 0.1s linear;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#marquee .icons:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#marquee .icons:nth-child(1):hover {
+  color: #e54c21;
+}
+
+#marquee .icons:nth-child(2):hover {
+  color: #214ce5;
+}
+
+#marquee .icons:nth-child(3):hover {
+  color: #cd6799;
+}
+
+#marquee .icons:nth-child(4):hover {
+  color: #7b09f8;
+}
+
+#marquee .icons:nth-child(5):hover {
+  color: #f7e018;
+}
+
+#marquee .icons:nth-child(6):hover {
+  color: #61dafb;
+}
+
+#marquee .icons:nth-child(7):hover {
+  color: #c3002f;
+}
+
+#marquee .icons:nth-child(8):hover {
+  color: #787cb4;
+}
+
+#marquee .icons:nth-child(9):hover {
+  color: red;
+}
+
 #testimonials {
   height: 80vh;
 }
@@ -651,6 +713,7 @@ header #banner-container #banner-overlay #banner-scroll-button {
 }
 
 #testimonials #testimonials-cards::before {
+  z-index: 2;
   content: '';
   position: absolute;
   top: 3vh;
@@ -661,6 +724,7 @@ header #banner-container #banner-overlay #banner-scroll-button {
 }
 
 #testimonials #testimonials-cards::after {
+  z-index: 2;
   content: '';
   position: absolute;
   display: -webkit-box;
@@ -677,6 +741,32 @@ header #banner-container #banner-overlay #banner-scroll-button {
   width: 4vw;
   height: 4vw;
   background-image: url(../assets/left-quote.svg);
+}
+
+#testimonials #testimonials-cards .featured-carousel .item {
+  border: 1px solid rgba(51, 49, 49, 0.8);
+  padding: 2vw 10px;
+  border-radius: 3px;
+}
+
+#testimonials #testimonials-cards .featured-carousel .item .testimony-wrap {
+  color: #c8c8c8;
+}
+
+#testimonials #testimonials-cards .featured-carousel .item .testimony-wrap .comments {
+  font-size: 13px;
+}
+
+#testimonials #testimonials-cards .featured-carousel .item .testimony-wrap p {
+  font-family: 'Poppins';
+}
+
+#testimonials #testimonials-cards .featured-carousel .item .testimony-wrap .quote i {
+  color: #ff6d54;
+}
+
+#testimonials #testimonials-cards .featured-carousel .item .testimony-wrap .position {
+  color: #ff6d54;
 }
 
 #testimonials #testimonials-text {
@@ -710,6 +800,113 @@ header #banner-container #banner-overlay #banner-scroll-button {
   letter-spacing: 14px;
   font-size: 17px;
   font-weight: 300;
+}
+
+#hireme {
+  width: 100vw;
+  min-height: 100vh;
+  background: #13161d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+#hireme::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/portfolio-bg-pattern.svg);
+  opacity: .04;
+  z-index: 0;
+}
+
+#hireme #hire-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+#hireme #hire-text h1 {
+  font-size: 70px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+#hireme #hire-text .subheading {
+  color: #ff6d54;
+  letter-spacing: 14px;
+  font-size: 17px;
+  font-weight: 300;
+  padding-left: 2px;
+}
+
+#hireme .hire-card {
+  z-index: 1;
+  height: 50vh;
+  background-color: #171b23 !important;
+  color: white;
+}
+
+#hireme .hire-card .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#hireme .hire-card .card-body .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#hireme .hire-card .card-body .heading h4 {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#hireme .hire-card .card-body h4, #hireme .hire-card .card-body .description {
+  font-family: 'Poppins';
+  margin-bottom: 3vh;
 }
 
 @-webkit-keyframes scroll-button {

@@ -8,14 +8,18 @@
         <meta name="description" content="Portfolio Website of Hesan Naveed">
         <meta name="keywords" content="HTML, CSS, JavaScript, ReactJS, ">
 
-        <!-- StyleSheets -->
-        <link rel="stylesheet" href="./scss/styles.css">
-
         <!-- Bootstrap Styles -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
             rel="stylesheet" 
             integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" 
             crossorigin="anonymous">
+
+        <!-- Owl Css -->
+        <link rel="stylesheet" href="scss/owl.carousel.min.css">
+        <link rel="stylesheet" href="scss/owl.theme.default.min.css">
+
+        <!-- StyleSheets -->
+        <link rel="stylesheet" href="./scss/styles.css">
 
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;display=swap" 
@@ -23,6 +27,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&amp;display=swap" 
                 rel="stylesheet">
 
+        <!-- ChunkFive Font CDN -->
+        <link href="http://fonts.cdnfonts.com/css/chunkfive" rel="stylesheet">
+                
         <!-- Font Awesome Icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
             integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
@@ -71,10 +78,13 @@
                                 <a class="nav-link" href="#portfolio">Portfolio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Hire Me</a>
+                                <a class="nav-link" href="#testimonials">Testimonials</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
+                                <a class="nav-link" href="#hireme">Hire Me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -344,14 +354,137 @@
             </div>
         </section>
 
+        <!-- Technologies Slideshow -->
+        <div class="marquee" id="marquee">
+            <div>
+                <i class="icons fab fa-5x fa-html5"></i>
+                <i class="icons fab fa-5x fa-css3-alt"></i>
+                <i class="icons fab fa-5x fa-sass"></i>
+                <i class="icons fab fa-5x fa-bootstrap"></i>
+                <i class="icons fab fa-5x fa-js"></i>
+                <i class="icons fab fa-5x fa-react"></i>
+                <i class="icons fab fa-5x fa-angular"></i>
+                <i class="icons fab fa-5x fa-php"></i>
+                <i class="icons fab fa-5x fa-laravel"></i>
+            </div>
+        </div>
+
         <!-- Testimonials -->
         <section class="row" id="testimonials" >
-            <div class="col-lg-8" id="testimonials-cards">
+            <div class="col-lg-8 d-flex align-items-center" id="testimonials-cards">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="featured-carousel owl-carousel">
+                            
+                            <div class="item">
+                                <div class="testimony-wrap d-flex">
+                                    <div class="user-img" style="background-image: url('assets/rock.jpeg')"></div>
+                                    <div class="text pl-4">
+                                        <span class="quote d-flex align-items-center justify-content-start">
+                                            <i class="fas fa-3x fa-quote-right ms-3 mb-2"></i>
+                                        </span>
+                                        <p class="comments">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        <p class="name">Racky Henderson</p>
+                                        <p class="position">Father</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="testimony-wrap d-flex">
+                                <div class="user-img" style="background-image: url('assets/rock.jpeg')">
+                                </div>
+                                <div class="text pl-4">
+                                    <span class="quote d-flex align-items-center justify-content-start">
+                                        <i class="fas fa-3x fa-quote-right ms-3 mb-2"></i>
+                                    </span>
+                                    <p class="comments">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p class="name">Henry Dee</p>
+                                    <p class="position">Businesswoman</p>
+                                </div>
+                                </div>
+                            </div>
+                            
+                            <div class="item">
+                                <div class="testimony-wrap d-flex">
+                                <div class="user-img" style="background-image: url('assets/rock.jpeg')">
+                                </div>
+                                <div class="text pl-4">
+                                    <span class="quote d-flex align-items-center justify-content-start">
+                                        <i class="fas fa-3x fa-quote-right ms-3 mb-2"></i>
+                                    </span>
+                                    <p class="comments">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p class="name">Ken Bosh</p>
+                                    <p class="position">Businesswoman</p>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             </div>
             <div class="col-lg-3" id="testimonials-text">
                 <p class="subheading">Testimonials</p>
                 <h1>What People Says.</h1>
+            </div>
+        </section>
+
+        <!-- Hire Me -->
+        <section id="hireme">
+            <div id="hire-text">
+                <p class="subheading">For Best Work</p>
+                <h1>Hire Me.</h1>
+            </div>
+
+            <div class="row m-0 container">
+                <div class="col-md-4">
+                    <div class="card hire-card">
+                        <div class="card-body">
+
+                            <div class="heading">
+                                <h4>Fiverr</h4>
+                            </div>
+
+                            <div class="description">
+                                Morbi bibendum nisl id porttitor ultrices odio elit vestibulum metus, 
+                                ac semper velit quam sed nulla aenean eu hendreritt.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card hire-card">
+                        <div class="card-body">
+
+                            <div class="heading">
+                                <h4>Upwork</h4>
+                            </div>
+
+                            <div class="description">
+                                Morbi bibendum nisl id porttitor ultrices odio elit vestibulum metus, 
+                                ac semper velit quam sed nulla aenean eu hendreritt.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card hire-card">
+                        <div class="card-body">
+
+                            <div class="heading">
+                                <h4>Freelancer.com</h4>
+                            </div>
+
+                            <div class="description">
+                                Morbi bibendum nisl id porttitor ultrices odio elit vestibulum metus, 
+                                ac semper velit quam sed nulla aenean eu hendreritt.
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -418,6 +551,14 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" 
                 integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" 
                 crossorigin="anonymous"></script>
+
+        <!-- JQuery Marquee Scripts -->
+        <script src="./jquery.pause.js"></script>
+        <script src="./jquery.marquee.min.js"></script>
+
+        <!-- Owl Scripts -->
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/main.js"></script>
 
         <!-- Custom Scripts -->
         <script src="./myscripts.js"></script>
